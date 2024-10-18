@@ -1,6 +1,12 @@
-## Screenshots
+<h3 align="center">
+    <img width="500" height="150" alt="ctkgradient logo" src=".assets/logo.png">
+</h3>
 
-<img src=".assets/gradient_screenshot.png" alt="Screenshot" width="800" height="370">
+<h3 align="center">Create a gradient frame for your customtkinter applications.</h3>
+
+<h3 align="center">
+    <img src=".assets/gradient_screenshot.png" alt="Screenshot" width="800" height="370">
+</h3>
 
 ## How to use it?
 ```python
