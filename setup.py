@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.1'
+VERSION = '0.1'
 DESCRIPTION = 'Create a gradient frame for customtkinter .'
 LONG_DESCRIPTION = 'Create a gradient frame for your customtkinter applications.'
 
