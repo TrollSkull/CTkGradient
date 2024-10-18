@@ -1,6 +1,6 @@
 ```python
-from CTkGradient import CTkGradient as ctkg
 import customtkinter as ctk
+import CTkGradient as ctkg
 
 # Initialize CustomTkinter
 ctk.set_appearance_mode("dark")
