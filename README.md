@@ -14,7 +14,7 @@ gradient_frame = ctkg.GradientFrame(
     width = 800,
     colors = ("#ec0075", "#ffd366"),
     height = 600,
-    direction = ctkg.TOP_TO_BOTTOM)
+    direction = "vertical")
 
 gradient_frame.pack(fill = "both")
 
