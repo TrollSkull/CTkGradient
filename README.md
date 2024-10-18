@@ -1,9 +1,6 @@
 ## Screenshots
-Vertical gradient:
-<img src=".assets/vertical_gradient_screenshot.png" alt="Screenshot" width="500" height="375">
 
-Horizontal gradient:
-<img src=".assets/horizontal_gradient_screenshot.png" alt="Screenshot" width="500" height="375">
+<img src=".assets/gradient_screenshot.png" alt="Screenshot" width="800" height="370">
 
 ## How to use it?
 ```python
