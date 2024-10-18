@@ -1,4 +1,13 @@
+## Screenshots
+Vertical gradient:
+<img src=".assets/vertical_gradient_screenshot.png" alt="Screenshot" width="500" height="375">
+
+Horizontal gradient:
+<img src=".assets/horizontal_gradient_screenshot.png" alt="Screenshot" width="500" height="375">
+
+## How to use it?
 ```python
+# Import customtkinter and CTkGradient
 import customtkinter as ctk
 import CTkGradient as ctkg
 
@@ -11,10 +20,11 @@ root = ctk.CTk()
 # Create a GradientFrame with custom colors and direction
 gradient_frame = ctkg.GradientFrame(
     master = root,
-    width = 800,
     colors = ("#ec0075", "#ffd366"),
+    direction = "vertical",
     height = 600,
-    direction = "vertical")
+    width = 800
+)
 
 gradient_frame.pack(fill = "both")
 
