@@ -6,7 +6,7 @@
 
 <div align="center">
     <a align="center" href="https://pypi.org/project/ctkgradient">
-        <img src="https://img.shields.io/pypi/v/ctkgradient" alt="PyPI">
+        <img src="https://img.shields.io/pypi/v/ctkgradient" alt="pypi">
     </a>
     <!---
     <a align="center" href="https://pepy.tech/project/ctkgradient">
@@ -50,6 +50,7 @@ gradient_frame = ctkg.GradientFrame(
     master = root,
     colors = ("#ec0075", "#ffd366"),
     direction = "vertical",
+    corner_radius = 10,
     height = 600,
     width = 800
 )
