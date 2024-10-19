@@ -4,9 +4,22 @@
 
 <h3 align="center">Create a gradient frame for your customtkinter applications.</h3>
 
+<div align="center">
+    <a align="center" href="https://pypi.org/project/ctkgradient">
+        <img src="https://img.shields.io/pypi/v/ctkgradient" alt="PyPI">
+    </a>
+    <!---
+    <a align="center" href="https://pepy.tech/project/ctkgradient">
+        <img src="https://static.pepy.tech/badge/ctkgradient" alt="Downloads">
+    </a>
+    --->
+    <img src="https://img.shields.io/powershellgallery/p/Pester?color=blue" alt="Platform">
+</div>
+
 <h3 align="center">
     <img src=".assets/gradient_screenshot.png" alt="Screenshot" width="800" height="370">
 </h3>
+
 
 ## CTkGradient
 CTkGradient is a fork of [GradientFrame-Tkinter](https://github.com/JeanExtreme002/GradientFrame-Tkinter), it is a python module to create customtkinter frames with a gradient background color of your choice, you can choose between a vertical or horizontal gradient, among other options.
