@@ -17,7 +17,7 @@
 </div>
 
 <h3 align="center">
-    <img src=".assets/gradient_screenshot.png" alt="Screenshot" width="800" height="370">
+    <img src=".assets/gradient_screenshot.png" alt="Screenshot" width="500" height="280">
 </h3>
 
 
