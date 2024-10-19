@@ -30,9 +30,40 @@ class GradientFrame(ctk.CTkFrame):
         ```
     """
 
-    def __init__(self, master, width, height, direction: Literal["horizontal", "vertical"], colors, corner_radius = 0):
-        # Call the constructor of the parent class
-        super().__init__(master, width=width, height=height, corner_radius=corner_radius)
+    def __init__(
+            self,
+            master,
+            width: int,
+            height: int,
+            direction: Literal[
+                "horizontal",
+                "vertical"
+            ],
+            colors: tuple,
+            corner_radius = 0
+        ):
+
+        if corner_radius > 10:
+            corner_radius = 10
+
+        super().__init__(
+            master,
+            width = width,
+            height = height,
+            corner_radius = corner_radius
+        )
+
+        first_color_frame = ctk.CTkFrame(
+            master = self,
+            fg_color = colors[0],
+            corner_radius = corner_radius
+        )
+
+        second_color_frame = ctk.CTkFrame(
+            master = self,
+            fg_color = colors[1],
+            corner_radius = corner_radius
+        )
 
         if direction == "horizontal":
             direction = LEFT_TO_RIGHT
@@ -40,6 +71,23 @@ class GradientFrame(ctk.CTkFrame):
         if direction == "vertical":
             direction = TOP_TO_BOTTOM
 
-        # Create the gradient canvas
-        self.gradient = Gradient(master=self, width=width, height=height, direction=direction, colors = colors)
-        self.gradient.pack(padx=0, pady=0, fill="both", expand = True)
+        self.gradient = Gradient(
+            master = self,
+            width = width,
+            height = height,
+            direction = direction,
+            colors = colors
+        )
+
+        # hacer cálculos con respecto a el border radius para que se extienda adecuadamente
+        # el frame del gradiente y no tenga el bug visual
+
+        if direction == LEFT_TO_RIGHT:
+            first_color_frame.pack(fill = "y", side = "left")
+            second_color_frame.pack(fill = "y", side = "right")
+            self.gradient.place(relx = 0.02, rely = 0, relwidth = 0.96, relheight = 1)
+
+        if direction == TOP_TO_BOTTOM:
+            first_color_frame.pack(fill = "x", side = "top")
+            second_color_frame.pack(fill = "x", side = "bottom")
+            self.gradient.place(relx = 0, rely = 0.02, relwidth = 1, relheight = 0.96)

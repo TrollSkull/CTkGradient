@@ -1,6 +1,5 @@
 import customtkinter as ctk
 
-# Directions for gradient
 TOP_TO_BOTTOM = 1
 LEFT_TO_RIGHT = 2
 
