@@ -55,7 +55,7 @@ gradient_frame = ctkg.GradientFrame(
     width = 800
 )
 
-gradient_frame.pack(fill = "both")
+gradient_frame.pack(fill = "both", expand = True)
 
 root.mainloop()
 ```
