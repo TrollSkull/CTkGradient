@@ -8,11 +8,9 @@
     <a align="center" href="https://pypi.org/project/ctkgradient">
         <img src="https://img.shields.io/pypi/v/ctkgradient" alt="pypi">
     </a>
-    <!---
     <a align="center" href="https://pepy.tech/project/ctkgradient">
         <img src="https://static.pepy.tech/badge/ctkgradient" alt="Downloads">
     </a>
-    --->
     <img src="https://img.shields.io/powershellgallery/p/Pester?color=blue" alt="Platform">
 </div>
 
