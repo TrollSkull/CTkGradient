@@ -1,13 +1,13 @@
 from typing import Literal
 import customtkinter as ctk
 
-from .gradient import Gradient, LEFT_TO_RIGHT, TOP_TO_BOTTOM
+from .gradient import Gradient, LEFT_TO_RIGHT, TOP_TO_BOTTOM, RADIAL
 
 class GradientFrame(ctk.CTkFrame):
     """
     A custom frame with a gradient background.
 
-    Inherits from CTkFrame and provides a gradient background 
+    Inherits from CTkFrame and provides a gradient background
     defined by the specified colors and direction.
 
     Parameters:
@@ -23,7 +23,7 @@ class GradientFrame(ctk.CTkFrame):
         gradient_frame = GradientFrame(
             master = root,
             width = 300,
-            height = 200, 
+            height = 200,
             direction = 'horizontal',
             colors = ('#FF0000', '#0000FF')
         )
@@ -37,7 +37,8 @@ class GradientFrame(ctk.CTkFrame):
             height: int,
             direction: Literal[
                 "horizontal",
-                "vertical"
+                "vertical",
+                "radial"
             ],
             colors: tuple,
             corner_radius = 0
@@ -66,10 +67,13 @@ class GradientFrame(ctk.CTkFrame):
         )
 
         if direction == "horizontal":
-            direction = LEFT_TO_RIGHT
+            direction = 1
 
         if direction == "vertical":
-            direction = TOP_TO_BOTTOM
+            direction = 2
+
+        if direction == "radial":
+            direction = 3
 
         self.gradient = Gradient(
             master = self,
@@ -79,8 +83,8 @@ class GradientFrame(ctk.CTkFrame):
             colors = colors
         )
 
-        # hacer cálculos con respecto a el border radius para que se extienda adecuadamente
-        # el frame del gradiente y no tenga el bug visual
+        # TODO: Make some calculations regarding the border radius so that it extends
+        # the gradient frame and do not have the visual error appropriately.
 
         if direction == LEFT_TO_RIGHT:
             first_color_frame.pack(fill = "y", side = "left")
@@ -91,3 +95,7 @@ class GradientFrame(ctk.CTkFrame):
             first_color_frame.pack(fill = "x", side = "top")
             second_color_frame.pack(fill = "x", side = "bottom")
             self.gradient.place(relx = 0, rely = 0.02, relwidth = 1, relheight = 0.96)
+
+        if direction == RADIAL:
+            second_color_frame.pack(fill = "both", side = "top", expand = True)
+            self.gradient.place(relx = 0.02, rely = 0, relwidth = 0.96, relheight = 1)
